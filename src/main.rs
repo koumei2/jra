@@ -1,6 +1,8 @@
 use clap::Parser;
 
 mod args;
+mod common;
+mod result;
 mod wakuban;
 
 const JRA_URL: &str = "https://www.jra.go.jp/";
@@ -12,6 +14,6 @@ async fn main() {
     match args.command {
         args::Command::GradeRace => println!("grade race"),
         args::Command::Wakuban => wakuban::get().await,
-        args::Command::Result => println!("result"),
+        args::Command::Result => result::get().await,
     };
 }
