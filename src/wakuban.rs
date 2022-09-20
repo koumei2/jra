@@ -17,8 +17,8 @@ struct Waku {
     horse: Horse,
     weight: String,
     jokey: String,
-    wakuban: u8,
-    umaban: Option<u8>,
+    bracket_number: u8,
+    horse_number: Option<u8>,
     status: super::common::WakubanStatus,
 }
 
@@ -35,22 +35,12 @@ pub async fn get() {
     let race_list = super::common::get_race_list(JRA_SYUTSUBAHYO_CNAME).await;
     //println!("{:?}", race_list);
     for l in race_list {
-        //let contents = get_jra_html(&l).await;
-        let contents = get_waku_html(&l).await;
+        let contents = super::common::get_jra_html(&l).await;
         //println!("{}", contents);
         wakulist.push(get_waku(contents));
     }
 
     println!("{}", serde_json::to_string(&wakulist).unwrap());
-}
-
-async fn get_waku_html(cname: &str) -> String {
-    let response = reqwest::get(super::JRA_URL.to_owned() + cname)
-        .await
-        .unwrap();
-    let body = response.bytes().await.unwrap();
-    let (body_utf8, _, _) = encoding_rs::SHIFT_JIS.decode(&body);
-    body_utf8.to_string()
 }
 
 fn get_waku(contents: String) -> Wakuban {
@@ -181,8 +171,8 @@ fn get_waku(contents: String) -> Wakuban {
             },
             weight: weight.trim().to_string(),
             jokey: jockey.to_string(),
-            wakuban: waku_caps[1].parse().unwrap(),
-            umaban: umaban_str.parse::<u8>().ok(),
+            bracket_number: waku_caps[1].parse().unwrap(),
+            horse_number: umaban_str.parse::<u8>().ok(),
             status: status,
         };
 

@@ -1,6 +1,9 @@
 use scraper::{Html, Selector};
 use serde::{Deserialize, Serialize};
 
+pub const JRA_URL: &str = "https://www.jra.go.jp/";
+pub const JRA_ACCESS_URL: &str = "https://www.jra.go.jp/JRADB/accessD.html";
+
 #[derive(Debug, Deserialize, Serialize)]
 pub enum WakubanStatus {
     Normal,
@@ -9,10 +12,17 @@ pub enum WakubanStatus {
     Cancel,
 }
 
+pub async fn get_jra_html(cname: &str) -> String {
+    let response = reqwest::get(JRA_URL.to_owned() + cname).await.unwrap();
+    let body = response.bytes().await.unwrap();
+    let (body_utf8, _, _) = encoding_rs::SHIFT_JIS.decode(&body);
+    body_utf8.to_string()
+}
+
 pub async fn get_jra_html_using_form(cname: &str) -> String {
     let response = reqwest::Client::new()
-        .post(super::JRA_ACCESS_URL)
-        .header(reqwest::header::REFERER, super::JRA_URL)
+        .post(JRA_ACCESS_URL)
+        .header(reqwest::header::REFERER, JRA_URL)
         .form(&[("cname", cname)])
         .send()
         .await
