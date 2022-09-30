@@ -16,8 +16,8 @@ struct Wakuban {
 struct Waku {
     horse: Horse,
     weight: String,
-    jokey: String,
-    bracket_number: u8,
+    jockey: String,
+    waku_number: u8,
     horse_number: Option<u8>,
     status: super::common::WakubanStatus,
 }
@@ -170,8 +170,8 @@ fn get_waku(contents: String) -> Wakuban {
                 icon: horse_icon,
             },
             weight: weight.trim().to_string(),
-            jokey: jockey.to_string(),
-            bracket_number: waku_caps[1].parse().unwrap(),
+            jockey: jockey.to_string(),
+            waku_number: waku_caps[1].parse().unwrap(),
             horse_number: umaban_str.parse::<u8>().ok(),
             status: status,
         };
