@@ -33,7 +33,7 @@ struct Horse {
 pub async fn get() {
     let mut wakulist = Vec::new();
     let race_list = super::common::get_race_list(JRA_SYUTSUBAHYO_CNAME).await;
-    //println!("{:?}", race_list);
+    // println!("Debug --- {:?}", race_list);
     for l in race_list {
         let contents = super::common::get_jra_html(&l).await;
         //println!("{}", contents);

@@ -35,11 +35,17 @@ pub async fn get_jra_html_using_form(cname: &str) -> String {
 pub async fn get_race_list(cname: &str) -> Vec<String> {
     let mut r = Vec::new();
     let contents = get_jra_html_using_form(cname).await;
+    //println!("{}", contents);
     let fragment = Html::parse_fragment(&contents);
     let ul_selector = Selector::parse(r#"ul.grade_race_unit"#).unwrap();
     let a_selector = Selector::parse("div.main a").unwrap();
     for ul in fragment.select(&ul_selector) {
         for a in ul.select(&a_selector) {
+            let umaban_selector = Selector::parse("span.umaban").unwrap();
+            if a.select(&umaban_selector).next().is_none() {
+                break;
+            }
+            //println!("{}", a.html());
             r.push(a.value().attr("href").unwrap().to_string());
         }
     }
