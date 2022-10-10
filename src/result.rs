@@ -38,7 +38,7 @@ struct ResultHorse {
 
 pub async fn get() {
     let mut result_list = Vec::new();
-    let race_list = super::common::get_race_list(JRA_RESULT_CNAME).await;
+    let race_list = super::common::get_race_list(JRA_RESULT_CNAME, false).await;
     for l in race_list {
         let contents = super::common::get_jra_html(&l).await;
         //println!("{}", contents);
