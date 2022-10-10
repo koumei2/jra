@@ -1,0 +1,412 @@
+[
+  {
+    "race_name": "産経賞オールカマー",
+    "baba": [
+      [
+        "天候",
+        "晴"
+      ],
+      [
+        "芝",
+        "良"
+      ]
+    ],
+    "result_time": [
+      [
+        "ハロンタイム",
+        "12.3 - 11.6 - 12.6 - 12.4 - 12.2 - 12.1 - 12.0 - 11.9 - 11.8 - 11.7 - 12.1"
+      ],
+      [
+        "上り",
+        "4F 47.5 - 3F 35.6"
+      ]
+    ],
+    "refund": {
+      "win": [
+        1950
+      ],
+      "place": [
+        550,
+        570,
+        560
+      ],
+      "wakuren": [
+        10080
+      ],
+      "wide": [
+        2850,
+        3180,
+        3650
+      ],
+      "umaren": [
+        10970
+      ],
+      "umatan": [
+        23660
+      ],
+      "trio": [
+        32870
+      ],
+      "tierce": [
+        246180
+      ]
+    },
+    "horses": [
+      {
+        "horse_number": 2,
+        "waku_number": 2,
+        "place": 1,
+        "time": "2:12.7",
+        "margin": "",
+        "horse_weight": 464,
+        "horse_weight_changes": "(+6)",
+        "popularity": 5
+      },
+      {
+        "horse_number": 1,
+        "waku_number": 1,
+        "place": 2,
+        "time": "2:12.9",
+        "margin": "１ 1/2",
+        "horse_weight": 478,
+        "horse_weight_changes": "(-2)",
+        "popularity": 6
+      },
+      {
+        "horse_number": 3,
+        "waku_number": 3,
+        "place": 3,
+        "time": "2:13.1",
+        "margin": "１ 1/4",
+        "horse_weight": 476,
+        "horse_weight_changes": "(+2)",
+        "popularity": 7
+      },
+      {
+        "horse_number": 13,
+        "waku_number": 8,
+        "place": 4,
+        "time": "2:13.2",
+        "margin": "クビ",
+        "horse_weight": 474,
+        "horse_weight_changes": "(+14)",
+        "popularity": 9
+      },
+      {
+        "horse_number": 10,
+        "waku_number": 7,
+        "place": 5,
+        "time": "2:13.5",
+        "margin": "１ 3/4",
+        "horse_weight": 460,
+        "horse_weight_changes": "(0)",
+        "popularity": 4
+      },
+      {
+        "horse_number": 8,
+        "waku_number": 6,
+        "place": 6,
+        "time": "2:13.7",
+        "margin": "１ 1/2",
+        "horse_weight": 484,
+        "horse_weight_changes": "(+4)",
+        "popularity": 1
+      },
+      {
+        "horse_number": 5,
+        "waku_number": 4,
+        "place": 7,
+        "time": "2:13.7",
+        "margin": "アタマ",
+        "horse_weight": 494,
+        "horse_weight_changes": "(-2)",
+        "popularity": 3
+      },
+      {
+        "horse_number": 9,
+        "waku_number": 6,
+        "place": 8,
+        "time": "2:14.2",
+        "margin": "３",
+        "horse_weight": 492,
+        "horse_weight_changes": "(-4)",
+        "popularity": 12
+      },
+      {
+        "horse_number": 12,
+        "waku_number": 8,
+        "place": 9,
+        "time": "2:14.3",
+        "margin": "１／２",
+        "horse_weight": 454,
+        "horse_weight_changes": "(0)",
+        "popularity": 10
+      },
+      {
+        "horse_number": 11,
+        "waku_number": 7,
+        "place": 10,
+        "time": "2:14.4",
+        "margin": "１／２",
+        "horse_weight": 502,
+        "horse_weight_changes": "(+2)",
+        "popularity": 8
+      },
+      {
+        "horse_number": 6,
+        "waku_number": 5,
+        "place": 11,
+        "time": "2:14.4",
+        "margin": "クビ",
+        "horse_weight": 488,
+        "horse_weight_changes": "(+14)",
+        "popularity": 11
+      },
+      {
+        "horse_number": 7,
+        "waku_number": 5,
+        "place": 12,
+        "time": "2:14.5",
+        "margin": "クビ",
+        "horse_weight": 472,
+        "horse_weight_changes": "(0)",
+        "popularity": 13
+      },
+      {
+        "horse_number": 4,
+        "waku_number": 4,
+        "place": 13,
+        "time": "2:24.6",
+        "margin": "大差",
+        "horse_weight": 508,
+        "horse_weight_changes": "(0)",
+        "popularity": 2
+      }
+    ]
+  },
+  {
+    "race_name": "神戸新聞杯",
+    "baba": [
+      [
+        "天候",
+        "晴"
+      ],
+      [
+        "芝",
+        "良"
+      ]
+    ],
+    "result_time": [
+      [
+        "ハロンタイム",
+        "12.7 - 10.6 - 11.4 - 12.6 - 12.7 - 12.5 - 12.3 - 11.6 - 11.4 - 11.2 - 12.1"
+      ],
+      [
+        "上り",
+        "4F 46.3 - 3F 34.7"
+      ]
+    ],
+    "refund": {
+      "win": [
+        1100
+      ],
+      "place": [
+        380,
+        1570,
+        280
+      ],
+      "wakuren": [
+        4110
+      ],
+      "wide": [
+        8570,
+        1420,
+        6260
+      ],
+      "umaren": [
+        37540
+      ],
+      "umatan": [
+        63220
+      ],
+      "trio": [
+        70330
+      ],
+      "tierce": [
+        453670
+      ]
+    },
+    "horses": [
+      {
+        "horse_number": 7,
+        "waku_number": 4,
+        "place": 1,
+        "time": "2:11.1",
+        "margin": "",
+        "horse_weight": 452,
+        "horse_weight_changes": "(+4)",
+        "popularity": 5
+      },
+      {
+        "horse_number": 6,
+        "waku_number": 3,
+        "place": 2,
+        "time": "2:11.7",
+        "margin": "３ 1/2",
+        "horse_weight": 494,
+        "horse_weight_changes": "(-12)",
+        "popularity": 12
+      },
+      {
+        "horse_number": 2,
+        "waku_number": 1,
+        "place": 3,
+        "time": "2:11.8",
+        "margin": "１／２",
+        "horse_weight": 496,
+        "horse_weight_changes": "(+6)",
+        "popularity": 4
+      },
+      {
+        "horse_number": 12,
+        "waku_number": 6,
+        "place": 4,
+        "time": "2:11.8",
+        "margin": "クビ",
+        "horse_weight": 466,
+        "horse_weight_changes": "(+6)",
+        "popularity": 6
+      },
+      {
+        "horse_number": 5,
+        "waku_number": 3,
+        "place": 5,
+        "time": "2:11.9",
+        "margin": "クビ",
+        "horse_weight": 498,
+        "horse_weight_changes": "(0)",
+        "popularity": 3
+      },
+      {
+        "horse_number": 1,
+        "waku_number": 1,
+        "place": 6,
+        "time": "2:12.0",
+        "margin": "１／２",
+        "horse_weight": 492,
+        "horse_weight_changes": "(+4)",
+        "popularity": 11
+      },
+      {
+        "horse_number": 11,
+        "waku_number": 6,
+        "place": 7,
+        "time": "2:12.2",
+        "margin": "１ 1/4",
+        "horse_weight": 510,
+        "horse_weight_changes": "(+4)",
+        "popularity": 1
+      },
+      {
+        "horse_number": 14,
+        "waku_number": 7,
+        "place": 8,
+        "time": "2:12.2",
+        "margin": "クビ",
+        "horse_weight": 456,
+        "horse_weight_changes": "(-2)",
+        "popularity": 2
+      },
+      {
+        "horse_number": 13,
+        "waku_number": 7,
+        "place": 9,
+        "time": "2:12.3",
+        "margin": "３／４",
+        "horse_weight": 456,
+        "horse_weight_changes": "(-6)",
+        "popularity": 10
+      },
+      {
+        "horse_number": 16,
+        "waku_number": 8,
+        "place": 10,
+        "time": "2:12.5",
+        "margin": "３／４",
+        "horse_weight": 464,
+        "horse_weight_changes": "(0)",
+        "popularity": 7
+      },
+      {
+        "horse_number": 10,
+        "waku_number": 5,
+        "place": 11,
+        "time": "2:12.5",
+        "margin": "クビ",
+        "horse_weight": 472,
+        "horse_weight_changes": "(-6)",
+        "popularity": 8
+      },
+      {
+        "horse_number": 4,
+        "waku_number": 2,
+        "place": 12,
+        "time": "2:12.5",
+        "margin": "アタマ",
+        "horse_weight": 484,
+        "horse_weight_changes": "(+2)",
+        "popularity": 15
+      },
+      {
+        "horse_number": 17,
+        "waku_number": 8,
+        "place": 13,
+        "time": "2:12.6",
+        "margin": "１／２",
+        "horse_weight": 448,
+        "horse_weight_changes": "(+10)",
+        "popularity": 14
+      },
+      {
+        "horse_number": 8,
+        "waku_number": 4,
+        "place": 14,
+        "time": "2:13.0",
+        "margin": "２ 1/2",
+        "horse_weight": 440,
+        "horse_weight_changes": "(-12)",
+        "popularity": 13
+      },
+      {
+        "horse_number": 9,
+        "waku_number": 5,
+        "place": 15,
+        "time": "2:13.5",
+        "margin": "３",
+        "horse_weight": 468,
+        "horse_weight_changes": "(+8)",
+        "popularity": 9
+      },
+      {
+        "horse_number": 15,
+        "waku_number": 8,
+        "place": 16,
+        "time": "2:13.9",
+        "margin": "２ 1/2",
+        "horse_weight": 442,
+        "horse_weight_changes": "(-10)",
+        "popularity": 16
+      },
+      {
+        "horse_number": 3,
+        "waku_number": 2,
+        "place": 17,
+        "time": "2:20.5",
+        "margin": "大差",
+        "horse_weight": 498,
+        "horse_weight_changes": "(-8)",
+        "popularity": 17
+      }
+    ]
+  }
+]
