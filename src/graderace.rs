@@ -94,3 +94,7 @@ fn get_race_name(element: ElementRef) -> String {
         .unwrap()
         .to_string()
 }
+
+/*重賞一覧は完成したので
+クレーと化してみる。
+枠番サンプル作成*/
