@@ -10,6 +10,7 @@ struct RaceResult {
     result_time: Vec<(String, String)>,
     refund: Refund,
     horses: Vec<ResultHorse>,
+    record: bool,
 }
 
 #[derive(Debug, Deserialize, Serialize)]
@@ -105,6 +106,7 @@ fn get_result(contents: String) -> RaceResult {
             tierce: get_result_refund(&fragment, "tierce"),
         },
         horses: get_result_horses(&fragment),
+        record: get_record(&fragment),
     };
     result
 }
@@ -207,4 +209,9 @@ fn get_result_refund(fragment: &Html, kind: &str) -> Vec<u32> {
         .select(&selector)
         .map(|x| x.text().next().unwrap().replace(",", "").parse().unwrap())
         .collect()
+}
+
+fn get_record(fragment: &Html) -> bool {
+    let selector = Selector::parse("strong.record").unwrap();
+    fragment.select(&selector).next().is_some()
 }
