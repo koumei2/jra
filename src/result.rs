@@ -28,12 +28,13 @@ struct Refund {
 struct ResultHorse {
     horse_number: u8,
     waku_number: u8,
-    place: u8,
+    place: Option<u8>,
     time: String,
     margin: String,
     horse_weight: u16,
     horse_weight_changes: String,
-    popularity: u8,
+    popularity: Option<u8>,
+    status: super::common::WakubanStatus,
 }
 
 pub async fn get() {
@@ -118,16 +119,11 @@ fn get_result_horses(fragment: &Html) -> Vec<ResultHorse> {
 
         // 着順
         let selector = Selector::parse("td.place").unwrap();
-        let place = h
-            .select(&selector)
-            .next()
-            .unwrap()
-            .text()
-            .next()
-            .unwrap()
-            .parse()
-            .unwrap();
-        //除外未対応
+        let place_str = h.select(&selector).next().unwrap().text().next().unwrap();
+        let (place, status) = match place_str {
+            "除外" => (None, super::common::WakubanStatus::Exclude),
+            _ => (place_str.parse().ok(), super::common::WakubanStatus::Normal),
+        };
 
         // 枠番
         let selector = Selector::parse("td.waku img").unwrap();
@@ -161,7 +157,7 @@ fn get_result_horses(fragment: &Html) -> Vec<ResultHorse> {
             .unwrap()
             .text()
             .next()
-            .unwrap()
+            .unwrap_or("")
             .to_string();
 
         // 着差
@@ -184,15 +180,11 @@ fn get_result_horses(fragment: &Html) -> Vec<ResultHorse> {
 
         // 人気
         let selector = Selector::parse("td.pop").unwrap();
-        let popularity = h
-            .select(&selector)
-            .next()
-            .unwrap()
-            .text()
-            .next()
-            .unwrap()
-            .parse()
-            .unwrap();
+        let popularity_text = h.select(&selector).next().unwrap().text().next();
+        let popularity = match popularity_text {
+            Some(v) => v.parse().ok(),
+            None => None,
+        };
 
         horses.push(ResultHorse {
             horse_number: horse_number,
@@ -203,6 +195,7 @@ fn get_result_horses(fragment: &Html) -> Vec<ResultHorse> {
             horse_weight: horse_weight,
             horse_weight_changes: horse_weight_change,
             popularity: popularity,
+            status: status,
         })
     }
     horses
