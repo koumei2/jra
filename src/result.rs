@@ -124,6 +124,7 @@ fn get_result_horses(fragment: &Html) -> Vec<ResultHorse> {
         let place_str = h.select(&selector).next().unwrap().text().next().unwrap();
         let (place, status) = match place_str {
             "除外" => (None, super::common::WakubanStatus::Exclude),
+            "中止" => (None, super::common::WakubanStatus::Stop),
             _ => (place_str.parse().ok(), super::common::WakubanStatus::Normal),
         };
 
