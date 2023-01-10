@@ -206,9 +206,11 @@ fn get_result_horses(fragment: &Html) -> Vec<ResultHorse> {
 
 fn get_result_refund(fragment: &Html, kind: &str) -> Vec<u32> {
     let selector = Selector::parse(&format!(r"div.refund_area li.{} div.yen", kind)).unwrap();
+
     fragment
         .select(&selector)
-        .map(|x| x.text().next().unwrap().replace(",", "").parse().unwrap())
+        .filter_map(|x| x.text().next())
+        .map(|x| x.replace(",", "").parse().unwrap())
         .collect()
 }
 
