@@ -32,8 +32,8 @@ struct ResultHorse {
     place: Option<u8>,
     time: String,
     margin: String,
-    horse_weight: u16,
-    horse_weight_changes: String,
+    horse_weight: Option<u16>,
+    horse_weight_changes: Option<String>,
     popularity: Option<u8>,
     status: super::common::WakubanStatus,
 }
@@ -125,6 +125,7 @@ fn get_result_horses(fragment: &Html) -> Vec<ResultHorse> {
         let (place, status) = match place_str {
             "除外" => (None, super::common::WakubanStatus::Exclude),
             "中止" => (None, super::common::WakubanStatus::Stop),
+            "取消" => (None, super::common::WakubanStatus::Cancel),
             _ => (place_str.parse().ok(), super::common::WakubanStatus::Normal),
         };
 
@@ -178,8 +179,8 @@ fn get_result_horses(fragment: &Html) -> Vec<ResultHorse> {
         // 馬体重
         let selector = Selector::parse("td.h_weight").unwrap();
         let mut horse_weight_text = h.select(&selector).next().unwrap().text();
-        let horse_weight = horse_weight_text.next().unwrap().parse().unwrap();
-        let horse_weight_change = horse_weight_text.next().unwrap().to_string();
+        let horse_weight = horse_weight_text.next().unwrap().parse().ok();
+        let horse_weight_change = horse_weight_text.next().map(|s| s.to_string());
 
         // 人気
         let selector = Selector::parse("td.pop").unwrap();
