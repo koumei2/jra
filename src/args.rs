@@ -15,3 +15,7 @@ pub enum Command {
     Wakuban,
     Result,
 }
+
+//SUBCOMMANDS の説明を追加
+// 中止の時対応 reqct
+// ２着同着時の対応 react
