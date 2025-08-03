@@ -33,7 +33,7 @@ struct ResultHorse {
     time: String,
     margin: String,
     horse_weight: Option<u16>,
-    horse_weight_changes: Option<String>,
+    horse_weight_changes: String,
     popularity: Option<u8>,
     status: super::common::WakubanStatus,
 }
@@ -180,7 +180,7 @@ fn get_result_horses(fragment: &Html) -> Vec<ResultHorse> {
         let selector = Selector::parse("td.h_weight").unwrap();
         let mut horse_weight_text = h.select(&selector).next().unwrap().text();
         let horse_weight = horse_weight_text.next().unwrap().parse().ok();
-        let horse_weight_change = horse_weight_text.next().map(|s| s.to_string());
+        let horse_weight_change = horse_weight_text.next().unwrap_or("").to_string();
 
         // 人気
         let selector = Selector::parse("td.pop").unwrap();
